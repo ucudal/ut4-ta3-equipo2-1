@@ -123,7 +123,14 @@ public class TElementoAB<T> implements IElementoAB<T> {
 
     @Override
     public int obtenerTamanio() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int tam = 1;
+        if(this.hijoIzq != null){
+            tam += this.hijoIzq.obtenerTamanio();
+        }
+        if(this.hijoDer != null){
+            tam += this.hijoDer.obtenerTamanio();
+        }
+        return tam;
     }
 
     @Override
