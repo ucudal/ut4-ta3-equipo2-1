@@ -87,7 +87,7 @@ public class TArbolBB<T> implements IArbolBB<T> {
         if(this.esVacio()) {
             return -1;
         } else {
-            return this.raiz.obtenerAltura() - 1;
+            return this.raiz.obtenerAltura();
         }
     }
 
